@@ -1,0 +1,353 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaMart | Shop the Future</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="announcement">
+    ✦ FREE SHIPPING ON ORDERS OVER ₹1,999
+    — USE CODE NOVA10 FOR 10% OFF
+</div>
+
+<header class="header">
+
+    <a class="logo" href="#">
+        <span class="logo-mark">N</span>
+        nova<span>mart.</span>
+    </a>
+
+    <nav class="desktop-nav">
+        <a href="#shop">Shop</a>
+        <a href="#shop" data-category-link="Tech">Tech</a>
+        <a href="#shop" data-category-link="Fashion">Fashion</a>
+        <a href="#shop" data-category-link="Home">Home & Living</a>
+    </nav>
+
+    <div class="header-actions">
+
+        <button class="icon-btn search-toggle">⌕</button>
+
+        <button class="icon-btn" id="wishlistTop">
+            ♡ <i id="wishCount">0</i>
+        </button>
+
+        <button class="cart-trigger" id="cartOpen">
+            Bag <span id="cartCount">0</span>
+        </button>
+
+        <button class="menu-toggle" id="menuToggle">☰</button>
+
+    </div>
+</header>
+
+<section class="search-panel" id="searchPanel">
+    <input id="searchInput" type="search"
+           placeholder="Search products...">
+    <button id="closeSearch">✕</button>
+</section>
+
+<main>
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <div class="hero-noise"></div>
+
+        <div class="hero-copy">
+
+            <div class="eyebrow">
+                <span></span>
+                THE NOVEMBER EDITION
+            </div>
+
+            <h1>
+                Good things.<br>
+                <em>Great finds.</em>
+            </h1>
+
+            <p>
+                Thoughtfully picked essentials for the way
+                you live, work and play.
+                Discover your next favourite thing.
+            </p>
+
+            <a class="primary-btn" href="#shop">
+                Explore collection <span>↗</span>
+            </a>
+
+            <div class="hero-meta">
+                <div>
+                    <b>2.4k+</b>
+                    <small>Happy shoppers</small>
+                </div>
+
+                <div>
+                    <b>4.9/5</b>
+                    <small>Customer rating</small>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="hero-art">
+
+            <div class="hero-orbit orbit-one"></div>
+            <div class="hero-orbit orbit-two"></div>
+
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=900&q=85"
+                     alt="Sneakers">
+            </div>
+
+            <div class="floating-tag tag-top">
+                NEW DROP
+                <b>2026</b>
+            </div>
+
+            <div class="floating-tag tag-bottom">
+                DESIGNED TO
+                <b>INSPIRE ✦</b>
+            </div>
+
+            <div class="hero-index">01 / 04</div>
+
+        </div>
+
+    </section>
+
+    <!-- TRUST SECTION -->
+
+    <section class="trust-strip">
+        <div>✦ <span>Curated quality</span></div>
+        <div>↗ <span>Fast delivery</span></div>
+        <div>◎ <span>Easy returns</span></div>
+        <div>♡ <span>Made for you</span></div>
+    </section>
+
+    <!-- PRODUCTS SECTION -->
+
+    <section class="shop-section" id="shop">
+
+        <div class="section-heading">
+
+            <div>
+                <div class="eyebrow dark">
+                    <span></span> THE GOOD STUFF
+                </div>
+
+                <h2>Find your <em>thing.</em></h2>
+            </div>
+
+            <p>
+                Fresh picks. Everyday favourites.<br>
+                All in one happy place.
+            </p>
+
+        </div>
+
+        <div class="shop-toolbar">
+
+            <div class="category-tabs" id="categoryTabs">
+
+                <button class="active" data-category="All">
+                    All products <span>12</span>
+                </button>
+
+                <button data-category="Tech">Tech</button>
+                <button data-category="Fashion">Fashion</button>
+                <button data-category="Home">Home</button>
+                <button data-category="Beauty">Beauty</button>
+
+            </div>
+
+            <select id="sortSelect">
+                <option value="featured">Sort: Featured</option>
+                <option value="low">Price: Low to high</option>
+                <option value="high">Price: High to low</option>
+                <option value="rating">Top rated</option>
+            </select>
+
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+
+        <div class="empty-state hidden" id="emptyState">
+            <div>⌕</div>
+            <h3>No matches found</h3>
+            <p>Try another search or category.</p>
+            <button class="text-btn" id="resetFilters">
+                Clear filters ↗
+            </button>
+        </div>
+
+    </section>
+
+    <!-- OFFER SECTION -->
+
+    <section class="promo">
+
+        <div class="promo-copy">
+
+            <div class="eyebrow">
+                <span></span>
+                A LITTLE SOMETHING EXTRA
+            </div>
+
+            <h2>
+                Your cart called.<br>
+                It wants <em>10% off.</em>
+            </h2>
+
+            <p>
+                Take a little treat on us.
+                Use the code below on your next order.
+            </p>
+
+            <div class="coupon" id="couponCopy">
+                NOVA10
+                <span>▣ Copy code</span>
+            </div>
+
+        </div>
+
+        <div class="promo-art">
+            <div class="promo-circle"></div>
+
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=700&q=85"
+                 alt="Headphones">
+        </div>
+
+    </section>
+
+    <!-- NEWSLETTER -->
+
+    <section class="newsletter">
+
+        <div>
+            <div class="eyebrow dark">
+                <span></span> THE NOVA NOTE
+            </div>
+
+            <h2>
+                Good taste.<br>
+                <em>Inbox only.</em>
+            </h2>
+        </div>
+
+        <form id="newsletterForm">
+
+            <label for="emailInput">
+                Get first dibs on new drops and special offers.
+            </label>
+
+            <div class="email-row">
+
+                <input type="email"
+                       id="emailInput"
+                       placeholder="Your email address"
+                       required>
+
+                <button type="submit">Join us ↗</button>
+
+            </div>
+
+            <small>No spam. Just the good stuff.</small>
+
+        </form>
+
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <a class="logo" href="#">
+        <span class="logo-mark">N</span>
+        nova<span>mart.</span>
+    </a>
+
+    <p>Curated essentials for a life well lived.</p>
+
+    <div class="footer-links">
+        <a href="#shop">Shop</a>
+        <a href="#shop">About</a>
+        <a href="mailto:hello@novamart.example">Contact</a>
+        <a href="#shop">Instagram ↗</a>
+    </div>
+
+    <small>© 2026 NovaMart. Demo storefront.</small>
+
+</footer>
+
+<!-- CART DRAWER -->
+
+<div class="overlay" id="overlay"></div>
+
+<aside class="cart-drawer" id="cartDrawer">
+
+    <div class="drawer-head">
+
+        <div>
+            <span class="eyebrow dark">YOUR SELECTION</span>
+            <h3>Your bag <span id="drawerCount">(0)</span></h3>
+        </div>
+
+        <button class="close-btn" id="cartClose">✕</button>
+
+    </div>
+
+    <div class="cart-items" id="cartItems"></div>
+
+    <div class="cart-footer">
+
+        <div class="subtotal">
+            <span>Subtotal</span>
+            <b id="subtotal">₹0</b>
+        </div>
+
+        <p>Shipping and taxes calculated at checkout.</p>
+
+        <button class="checkout-btn" id="checkoutBtn">
+            Continue to checkout <span>↗</span>
+        </button>
+
+        <small>Secure checkout · Easy returns</small>
+
+    </div>
+
+</aside>
+
+<!-- QUICK VIEW MODAL -->
+
+<div class="modal-backdrop" id="modalBackdrop">
+
+    <div class="quick-modal" id="quickModal">
+
+        <button class="close-btn modal-close" id="modalClose">
+            ✕
+        </button>
+
+        <div id="quickContent"></div>
+
+    </div>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
